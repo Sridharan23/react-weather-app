@@ -39,7 +39,10 @@ function Weather() {
       return <img src={cloudimg} alt="none1" className="img"></img>;
     } else if (weather === "Haze") {
       return <img src={mistimg} alt="none2"className="img"></img>;
-    } else if (weather === "Rain") {
+    }   else if (weather === "Mist") {
+      return <img src={mistimg} alt="none2"className="img"></img>;
+    }
+    else if (weather === "Rain") {
       return <img src={rainimg} alt="none3"className="img"></img>;
     } else {
       return <img src={clearimg} alt="none4"className="img"></img>;
@@ -62,7 +65,7 @@ function Weather() {
             <input onChange={handleCity} type="text"></input>
           </fieldset>
 
-          <button className="btn" onClick={getWeather}>get wather</button>
+          <button className="btn" onClick={getWeather}>get weather</button>
           <div>
             <p className="error">{error}</p>
             <p className="ans">weather:{weather}</p>
